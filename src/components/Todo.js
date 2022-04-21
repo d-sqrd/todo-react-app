@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 function Todo({todo, deleteTodo}) {
-    const [todoText, setTodoText] = useState(todo.desc);
+    const [todoText, setTodoText] = useState(todo.text);
     const [edit, setEdit] = useState(false);
     const [editInput, setEditInput] = useState('');
 
