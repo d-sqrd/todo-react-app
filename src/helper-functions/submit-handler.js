@@ -1,6 +1,5 @@
 const submitHandler = (e, todoList, setTodoList) => {
     e.preventDefault();
-    // console.log(e.target.newTodo.value);
     let newTodo = {};
     const newTodoText = e.target.newTodoInput.value;
     newTodo.id = Math.floor(Math.random() * 1000000000);
