@@ -11,11 +11,13 @@ function Todo({todo, todoList, setTodoList}) {
     }
 
     return(
-      <div>
-        <h1>{todoText}</h1>
-        <button onClick={() => setEdit(!edit)}>Update</button>
-        <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-        { edit ?  <EditForm   setTodoText={setTodoText}/> : "" }
+      <div id="todo">
+        <h4>{todoText}</h4>
+        <div>
+          <button onClick={() => setEdit(!edit)} className="btn">Update</button>
+          <button onClick={() => deleteTodo(todo.id)} className="btn">Delete</button>
+        { edit ?  <EditForm   setTodoText={setTodoText} edit={edit} setEdit={setEdit}/> : "" }
+        </div>
       </div>
     );
   }

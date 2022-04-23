@@ -1,10 +1,10 @@
 import { useState } from "react";
 import editSubmitHandler from "../helper-functions/edit-submit-handler";
 
-const EditForm = ({setTodoText}) => {
+const EditForm = ({setTodoText, edit, setEdit}) => {
     const [editInput, setEditInput] = useState('');
     function handleEditSubmit(e) {
-        editSubmitHandler(e, setTodoText, setEditInput);
+        editSubmitHandler(e, setTodoText, setEditInput, edit, setEdit);
     }
     return(
         <div>
@@ -15,7 +15,8 @@ const EditForm = ({setTodoText}) => {
                         onChange={e => setEditInput(e.target.value)}>        
                 </input>
                 <input  type="submit"
-                        value="Update Todo">
+                        value="Update Todo"
+                        className="btn">
                 </input>
             </form>
         </div>
